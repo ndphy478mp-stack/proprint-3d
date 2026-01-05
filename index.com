@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pro Print 3D</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f7f7f7;
+}
+
+header {
+background: #111;
+color: white;
+padding: 20px;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 8px;
+}
+
+.logo {
+font-size: 28px;
+font-weight: bold;
+color: #00e676;
+letter-spacing: 1.2px;
+}
+
+.tagline {
+font-size: 14px;
+color: #ccc;
+}
+
+section {
+padding: 20px;
+max-width: 1000px;
+margin: auto;
+}
+
+.productos {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 20px;
+}
+
+.producto {
+background: white;
+border-radius: 10px;
+padding: 15px;
+text-align: center;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.producto img {
+width: 100%;
+height: 160px;
+object-fit: cover;
+border-radius: 8px;
+}
+
+.precio {
+font-weight: bold;
+color: #222;
+margin: 8px 0;
+}
+
+.desc {
+color: #555;
+font-size: 13px;
+}
+
+footer {
+background: #111;
+color: #aaa;
+text-align: center;
+padding: 15px;
+margin-top: 30px;
+font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Pro Print 3D</div>
+<p class="tagline">Impresión 3D personalizada — ¡Hecho para ti!</p>
+</header>
+
+<section>
+<h2>🛒 Nuestros productos</h2>
+
+<div class="productos">
+
+<!-- Llaveros -->
+<div class="producto">
+<img src="https://images.pexels.com/photos/10016862/pexels-photo-10016862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200" alt="Llaveros temáticos 3D">
+<h3>Llaveros simples</h3>
+<p class="precio">5,000 COP</p>
+<p class="desc">Llaveros básicos.</p>
+</div>
+
+<div class="producto">
+<img src="https://images.pexels.com/photos/10016863/pexels-photo-10016863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200" alt="Llaveros con temática">
+<h3>Llaveros temáticos</h3>
+<p class="precio">10,000 COP</p>
+<p class="desc">Con personajes o logos.</p>
+</div>
+
+<!-- Materias -->
+<div class="producto">
+<img src="https://images.pexels.com/photos/10016864/pexels-photo-10016864.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200" alt="Modelos grandes 3D">
+<h3>Modelos grandes (Materia)</h3>
+<p class="precio">Desde 10,000 COP</p>
+<p class="desc">Según tamaño y detalle.</p>
+</div>
+
+<!-- Soportes -->
+<div class="producto">
+<img src="https://images.pexels.com/photos/10016865/pexels-photo-10016865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200" alt="Soporte para celular 3D">
+<h3>Soporte para celular</h3>
+<p class="precio">10,000 COP</p>
+<p class="desc">Soporte resistente impreso en 3D.</p>
+</div>
+
+<!-- Figuras -->
+<div class="producto">
+<img src="https://images.pexels.com/photos/10016866/pexels-photo-10016866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200" alt="Figura 3D pequeña">
+<h3>Figuras personalizadas pequeñas</h3>
+<p class="precio">15,000 COP</p>
+<p class="desc">Decorativas o coleccionables.</p>
+</div>
+
+<div class="producto">
+<img src="https://images.pexels.com/photos/10016867/pexels-photo-10016867.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200" alt="Figura 3D mediana o grande">
+<h3>Figuras medianas/grandes</h3>
+<p class="precio">20,000+ COP</p>
+<p class="desc">Según tamaño y detalle.</p>
+</div>
+
+<!-- Piezas personalizadas -->
+<div class="producto">
+<img src="https://images.pexels.com/photos/10016868/pexels-photo-10016868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200" alt="Pieza personalizada 3D">
+<h3>Piezas personalizadas</h3>
+<p class="precio">Desde 20,000 COP</p>
+<p class="desc">Repuestos o diseños especiales.</p>
+</div>
+
+<!-- Hogar -->
+<div class="producto">
+<img src="https://images.pexels.com/photos/10016869/pexels-photo-10016869.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200" alt="Accesorios del hogar 3D">
+<h3>Cosas para el hogar</h3>
+<p class="precio">Desde 10,000 COP</p>
+<p class="desc">Organizadores, clips, ganchos, etc.</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Pro Print 3D — Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
