@@ -3,63 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <title>Pro Print 3D</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
 font-family: Arial, sans-serif;
-margin: 0;
 background: #f5f5f5;
+margin: 0;
+padding: 20px;
 }
 
-header {
-background: #0b0b0b;
-color: #00ff88;
+h1 {
 text-align: center;
-padding: 20px;
-}
-
-section {
-padding: 20px;
 }
 
 .productos {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 15px;
+gap: 20px;
 }
 
 .producto {
 background: white;
 padding: 15px;
-border-radius: 8px;
+border-radius: 10px;
 text-align: center;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.producto img {
+width: 180px;
+height: auto;
+margin-bottom: 10px;
 }
 
 button {
-background: #00c853;
-border: none;
-padding: 10px;
+background: #2ecc71;
 color: white;
-cursor: pointer;
+border: none;
+padding: 8px 15px;
 border-radius: 5px;
-margin-top: 10px;
+cursor: pointer;
 }
 
 button:hover {
-background: #009624;
+background: #27ae60;
 }
 
-.carrito {
+#carrito {
+margin-top: 40px;
 background: white;
-padding: 15px;
-border-radius: 8px;
-margin-top: 20px;
-}
-
-.total {
-font-weight: bold;
-margin-top: 10px;
+padding: 20px;
+border-radius: 10px;
 }
 
 input[type="file"] {
@@ -70,64 +64,78 @@ margin-top: 10px;
 
 <body>
 
-<header>
-<h1>Pro Print 3D</h1>
-<p>Impresión 3D personalizada</p>
-</header>
+<h1>🖨️ Pro Print 3D</h1>
 
-<section>
-<h2>Productos</h2>
+<section class="productos">
 
-<div class="productos">
 <div class="producto">
+<img src="llavero.jpg">
 <h3>Llavero</h3>
 <p>$5.000 COP</p>
 <button onclick="agregar('Llavero',5000)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="llavero-tematico.jpg">
 <h3>Llavero temático</h3>
 <p>$10.000 COP</p>
 <button onclick="agregar('Llavero temático',10000)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="porta-celulares.jpg">
 <h3>Soporte celular</h3>
 <p>$10.000 COP</p>
 <button onclick="agregar('Soporte celular',10000)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="figura-pequena.jpg">
 <h3>Figura pequeña</h3>
 <p>$15.000 COP</p>
 <button onclick="agregar('Figura pequeña',15000)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="figura-mediana.jpg">
 <h3>Figura mediana</h3>
 <p>Desde $20.000 COP</p>
 <button onclick="agregar('Figura mediana',20000)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="figura-grande.jpg">
+<h3>Figura grande</h3>
+<p>Desde $25.000 COP</p>
+<button onclick="agregar('Figura grande',25000)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="pieza-personalizada.jpg">
 <h3>Pieza personalizada</h3>
 <p>Desde $20.000 COP</p>
 <button onclick="agregar('Pieza personalizada',20000)">Agregar</button>
 </div>
+
+<div class="producto">
+<img src="hogar.jpg">
+<h3>Productos para el hogar</h3>
+<p>Desde $10.000 COP</p>
+<button onclick="agregar('Productos hogar',10000)">Agregar</button>
 </div>
 
-<div class="carrito">
+</section>
+
+<section id="carrito">
 <h2>🛒 Carrito</h2>
 <ul id="lista"></ul>
-<p class="total">Total: $<span id="total">0</span> COP</p>
+<p><strong>Total: $<span id="total">0</span> COP</strong></p>
 
-<h3>Sube tu figura o imagen</h3>
-<input type="file" accept=".stl,.jpg,.png,.jpeg">
+<h3>📁 Cargar tu diseño (STL / imagen)</h3>
+<input type="file">
 
 <br><br>
-<button onclick="pagar()">Pagar</button>
-</div>
-
+<button onclick="pagar()">Pagar con Bancolombia</button>
 </section>
 
 <script>
@@ -137,19 +145,14 @@ function agregar(nombre, precio) {
 const li = document.createElement("li");
 li.textContent = nombre + " - $" + precio + " COP";
 document.getElementById("lista").appendChild(li);
+
 total += precio;
 document.getElementById("total").textContent = total;
 }
 
 function pagar() {
-alert(
-"Resumen del pedido:\n" +
-"Total: $" + total + " COP\n\n" +
-"Serás redirigido al pago."
-);
-
-// 🔴 AQUÍ VA TU LINK DE PAGO REAL (Wompi / Bancolombia)
-window.location.href = "https://checkout.wompi.co/";
+alert("Pedido registrado. Serás redirigido a Bancolombia.");
+window.location.href = "https://www.bancolombia.com";
 }
 </script>
 
